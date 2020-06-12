@@ -34,7 +34,7 @@ performance
 <img src="mohseb2.PNG">
 <img src="el_mohaseb0.PNG">
 
-(1day project)
+(1day project) (old version)
 ### solved with new interface (the style problem )
 (first_version)
 <img src="myappp.PNG">
