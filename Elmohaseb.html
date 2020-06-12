@@ -1,5 +1,4 @@
   
-  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -448,13 +447,34 @@ let getAsolTotal = document.getElementById("total_asl");
 let getKhsomTotal = document.getElementById("total_kshm");
 
 
+if (typeof total_asols === "undefined") {
+    alert("total_asols is undefined");
+    total_asols = 0;
+  } else {
+  
+    total_asols = total_asols;
+    alert("total_asols is defined");
+  }
+
+
+if (typeof total_khsoms === "undefined") {
+    total_khsoms = 0;
+    alert("total_khsoms is undefined");
+  } else {
+    total_khsoms = total_khsoms;
+    alert("total_khsoms is defined");
+  }
+  
+
+
+
 
 let checkWinner =  total_asols - total_khsoms;
 
 if (checkWinner > 0 ) {
-  getAsolTotal.class = "asol_pass";
+  getAsolTotal.className = "asol_pass";
   alert('here1');
-  getKhsomTotal.class = "khsom_pass";
+  getKhsomTotal.className = "khsom_pass";
 } 
 
 if (checkWinner < 0) {
@@ -472,19 +492,7 @@ if (checkWinner == 0) {
   
 
 
-if (typeof total_asols === "undefined") {
-    alert("total_asols is undefined");
-  } else {
-    alert("total_asols is defined");
-  }
 
-
-if (typeof total_khsoms === "undefined") {
-    alert("total_khsoms is undefined");
-  } else {
-    alert("total_khsoms is defined");
-  }
-  
 
 
 
@@ -514,4 +522,4 @@ function myprinter() {
 </script>
 
 </body>
-</html>
+</html>  
