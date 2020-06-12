@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+<style>
+table, td {
+  border: 1px solid black;
+  width: 50%;
+  direction: rtl;
+  text-align:center;
+}
+</style>
+</head>
+<body>
+
+<input type="number" id="userInput">
+<br /><br />
+<input type="radio" id="asol" name="mod5lat">اصول
+<br /><br />
+ 
+<input type="radio" id="5som"  name="mod5lat">خصوم
+
+
+<br /><br />
+<button onclick="add_item()">Add</button>
+
+
+<br /><br />
+
+<table id="myTable1">
+  <tr>
+    <td style="background-color:black;color:white;width:90px;direction: rtl;text-align:center;">اصول</td>
+    <td style="background-color:black;color:white;width:88px;direction: rtl;text-align:center;">خصوم</td>
+  </tr>
+</table>
+
+
+
+<table id="myTable">
+
+</table>
+<br>
+<script>
+const allItems = [];
+var money = document.getElementById("userInput");
+let aslpsss = document.getElementById("asol");
+let khsom = document.getElementById("5som");
+ 
+const myasol = {
+  asol: [],
+  names: [],
+  addasl: function() {
+    myasol.asol.push(money.value);
+  }
+};
+const mykhsom = {
+  khsom: [],
+  names: [],
+  addkhsm: function() {
+    myasol.asol.push(money.value);
+  }
+  
+};
+
+
+
+index = 0;
+
+
+
+function add_item() {
+
+  
+  if (aslpsss.checked == true) {
+    myasol.addasl();
+    alert(myasol.asol + " | اصول");
+  }
+  
+  if (khsom.checked == true) {
+    mykhsom.addkhsm();
+    alert(mykhsom.khsom + " | خصوم");
+  }
+
+
+}
+
+  
+  /*
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(0);
+  var asol = row.insertCell(0);
+  asol.class = "asl";
+  myasol.push(asol.class);
+  var khsom = row.insertCell(1);
+  khsom.class = "khsm" + index;
+  myasol.push(khsom.class);
+  asol.innerHTML = money.value;
+  index += 1;
+  */
+
+
+
+</script>
+
+</body>
+</html>
