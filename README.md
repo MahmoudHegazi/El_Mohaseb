@@ -2,7 +2,7 @@
 
 I deleted the part for add the total inside the div bymistake I will do again later 
 
-try it for free: https://eloquentorangutan.htmlpasta.com/
+try it for free: https://unweededfruit.htmlpasta.com/
 
 Full code on this file Elmohaseb.html 
 
@@ -18,14 +18,16 @@ make the highr total be green
 don't forget to add: اجمالي في النحتين وترحيل الفرق
 performance 
 
+	
+	
 
 	
 	
 
-<img src="el_mohaseb0.PNG">
+
+<img src="Elmohaseb1.PNG">
 <img src="ELmohaseb2.PNG">
-<img src="ELmohaseb.PNG">
-
+<img src="el_mohaseb0.PNG">
 
 (1day project)
 ### solved with new interface (the style problem )
