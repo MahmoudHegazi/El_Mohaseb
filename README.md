@@ -11,7 +11,7 @@ can create the budget  and Now I did it (JS pure) (not for kids)
 <img src="myappp.PNG">
 
 
-# the style will solve this
+### the style will solve this or maybe python and jinja2 make it more professoinal
 
 <img src="elmohaseb_2.PNG">
 
