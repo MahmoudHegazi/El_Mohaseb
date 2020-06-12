@@ -1,9 +1,13 @@
-هفكر في التسويق العب علي حتيت اليوزرس العادين ده لو المحاسبين عايزنه ومش هيخاف
+## (ElMohaseb Budget JS app openSource)
+develop plan:
+فكر في التسويق العب علي حتيت اليوزرس العادين ده لو المحاسبين عايزنه ومش هيخاف
 ممكن المستخدم يحسب مزانية بيته ويحط خطه يحوش ولو دخلت البايثون ممكن اقدر
 اسعده في الادخار بس ده قدام 
 وسجل كمان الميزانيات اللي فاتت واقوله حوش ايه وزاد ولا لا 
+يمكن جعل المستخدمين يقوم بعمل ميزانيات للمشروعات ووضعها علي المنتدي كمرجع
+وامكانية طبعها والزيادة فيها او النقص
+لدي كل مستخدم في قائمته
 
-(ElMohaseb Budget JS app openSource)
 
 I deleted the part for add the total inside the div bymistake I will do again later 
 
@@ -17,6 +21,10 @@ add items and enter the number then select the type of each item click finish ge
 One of my dreams while I was at my academy studing accounting is to build an application
 
 can create the budget  and Now I did it (JS pure) (not for kids)
+
+
+
+
 
 next :
 make the highr total be green
