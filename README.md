@@ -8,6 +8,10 @@ can create the budget  and Now I did it (JS pure) (not for kids)
 
 (1day project)
 
+myappp.PNG
+
+
+# the stle will solve this
 <img src="el_mohaseb.PNG">
 <img src="elmohaseb_2.PNG">
 
