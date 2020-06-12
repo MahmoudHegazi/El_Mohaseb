@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -272,6 +273,8 @@ function finished() {
   let getNameKhsm = mykhsom.names;  
   
   let maxNumber = Math.max(getasol.length, getkhsm.length);
+  let total_asols = myasol.countAsol();
+let total_khsoms = mykhsom.countKhsom();
 
 
 if (getasol.length > 0) {
@@ -283,9 +286,14 @@ for (let i=0; i < getasol.length; i++) {
    myp.appendChild(myspan);
    asolContainer.appendChild(myp);
    myp.className = "myasol1";
-   myspan.className = "asol_spans";
+  
 }
 
+  /* total asol */
+
+   let asolTotal = document.createElement('p');
+   asolTotal.innerText = "$" + total_asols + " ";
+   asolContainer.appendChild(asolTotal);
 } 
 
 
@@ -301,16 +309,19 @@ for (let i=0; i < getkhsm.length; i++) {
    myp.className = "mykhsom1";
 }
 
+
+/* total khsom */
+
+   let khsomTotal = document.createElement('p');
+   khsomTotal.innerText = "$" + total_khsoms + " ";
+   khsomContainer.appendChild(khsomTotal);
 } 
 
 
 
 
 
-let total_asols = myasol.countAsol();
-let total_khsoms = mykhsom.countKhsom();
-asstessTotal.innerHTML = "$ " + total_asols;
-liabTotal.innerHTML = "$ " + total_khsoms;
+
 }
 
   
