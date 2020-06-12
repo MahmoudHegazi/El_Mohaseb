@@ -53,7 +53,15 @@ border: 2px solid green;
 </head>
 <body>
 
-<input type="number" id="userInput">
+<div style="display:flex;">
+
+<input type="number" id="userInput"><br />
+<label>المبلغ</label>
+
+<input type="text" id="elementName" style="margin-left:20px;">
+<label>المدخل</label>
+</div>
+
 <br /><br />
 <input type="radio" id="asol" name="mod5lat">اصول
 <br /><br />
@@ -101,6 +109,7 @@ border: 2px solid green;
 <script>
 const allItems = [];
 var money = document.getElementById("userInput");
+let elname = document.getElementById("elementName");
 let aslpsss = document.getElementById("asol");
 let khsom = document.getElementById("5som");
  
@@ -109,6 +118,9 @@ const myasol = {
   names: [],
   addasl: function() {
     myasol.asol.push(money.value);
+  },
+  addname: function() {
+    myasol.names.push(elname.value);
   }
 };
 const mykhsom = {
@@ -116,6 +128,9 @@ const mykhsom = {
   names: [],
   addkhsm: function() {
     mykhsom.khsom.push(money.value);
+  },
+  addname: function() {
+    mykhsom.names.push(elname.value);
   }
   
 };
@@ -131,11 +146,13 @@ function add_item() {
   
   if (aslpsss.checked == true) {
     myasol.addasl();
+    myasol.addname();
     alert(myasol.asol + " | اصول");
   }
   
   if (khsom.checked == true) {
     mykhsom.addkhsm();
+    mykhsom.addname();
     alert(mykhsom.khsom + " | خصوم");
   }
 
@@ -152,6 +169,9 @@ function finished() {
   
   let getasol = myasol.asol;
   let getkhsm = mykhsom.khsom;
+  let getNameAsl = myasol.names;
+  let getNameKhsm = mykhsom.names;  
+  
   let maxNumber = Math.max(getasol.length, getkhsm.length);
 
 
@@ -160,7 +180,7 @@ for (let i=0; i < getasol.length; i++) {
    let myp = document.createElement('p');
    let myspan = document.createElement('span');
    myspan.innerText = "مدين";
-   myp.innerText = getasol[i];
+   myp.innerText = getNameAsl[i] + " " + getasol[i];
    myp.appendChild(myspan);
    asolContainer.appendChild(myp);
    myp.className = "myasol1";
@@ -175,7 +195,7 @@ for (let i=0; i < getkhsm.length; i++) {
    let myp = document.createElement('p');
    let myspan = document.createElement('span');
    myspan.innerText = "دائن";
-   myp.innerText = getkhsm[i]; 
+   myp.innerText = getNameKhsm[i] + " " + getkhsm[i]; 
    myp.appendChild(myspan);
    khsomContainer.appendChild(myp);
    myspan.className = "khsom_spans";
