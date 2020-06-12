@@ -1,4 +1,8 @@
-   add items and enter the number then select the type of each item click finish get prinited budget
+Full code on this file Elmohaseb.html 
+
+
+
+add items and enter the number then select the type of each item click finish get prinited budget
     (MIX web development and accounting)
 
 One of my dreams while I was at my academy studing accounting is to build an application
@@ -14,7 +18,9 @@ performance
 <img src="myappp.PNG">
 
 
-### the style will solve this or maybe python and jinja2 make it more professoinal
+### maybe python and jinja2 make it more professoinal
+
+### solved with new interface (the style problem )
 
 <img src="elmohaseb_2.PNG">
 
