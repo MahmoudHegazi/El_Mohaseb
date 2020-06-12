@@ -13,12 +13,12 @@ table, td {
 
 .mydiv {
    display: flex;
-   margin-top: -19px;
+
    
    
 }
 .myasol1  {
-  width: 230px;
+  width: 240px;
   background-color: lightblue;  
   text-align: center;
   height:32px;
@@ -29,7 +29,7 @@ table, td {
 
 .mykhsom1  {
 background-color: gold;
-width: 245px;
+width: 240px;
 height:32px;
 text-align: center;
 border: 2px solid green;
@@ -63,37 +63,40 @@ border: 2px solid green;
 
 <br /><br />
 <button onclick="add_item()">Add</button>
+<button onclick="finished()">finished</button>
 
 
 <br /><br />
 
 <div class="mydiv" style="width:541px;">
   <div >
-   <p style="height:100%;background-color:black;border-left:2px solid white;color:white;" class="myasol1">اصول</p>
+   <p style="height:100%;background-color:black;border-left:2px solid white;color:white;width:240px" class="myasol1">اصول</p>
    </div>
    
    
    <div>
-   <p class="mykhsom1" style="height:100%;background-color:black;border-left:2px solid white;color:white;">خصوم</p>
+   <p class="mykhsom1" style="height:100%;background-color:black;border-left:2px solid white;color:white;width:240px">خصوم</p>
    
    </div>
 </div>
+
 
 <div class="mydiv" id="container"  >
 
    <div id="khsom_container">
-   <p class="myasol1" >b1<span class="khsom_spans">دائن</span></p>   
+ 
    </div>
    
    
    <div id="asol_container">
-   <p class="mykhsom1">1b <span class="asol_spans">مدين</span></p>
+
    </div>
 </div>
 
+<br /><br />
 
 
-<button onclick="finished()">finished</button>
+
 <br>
 <script>
 const allItems = [];
@@ -155,9 +158,13 @@ function finished() {
 if (getasol.length > 0) {
 for (let i=0; i < getasol.length; i++) {
    let myp = document.createElement('p');
-   myp.innerText = getasol[i];   
+   let myspan = document.createElement('span');
+   myspan.innerText = "مدين";
+   myp.innerText = getasol[i];
+   myp.appendChild(myspan);
    asolContainer.appendChild(myp);
    myp.className = "myasol1";
+   myspan.className = "asol_spans";
 }
 
 } 
@@ -166,8 +173,12 @@ for (let i=0; i < getasol.length; i++) {
 if (getkhsm.length > 0) {
 for (let i=0; i < getkhsm.length; i++) {
    let myp = document.createElement('p');
-   myp.innerText = getasol[i];   
+   let myspan = document.createElement('span');
+   myspan.innerText = "دائن";
+   myp.innerText = getkhsm[i]; 
+   myp.appendChild(myspan);
    khsomContainer.appendChild(myp);
+   myspan.className = "khsom_spans";
    myp.className = "mykhsom1";
 }
 
