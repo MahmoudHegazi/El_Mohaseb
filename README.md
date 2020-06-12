@@ -12,6 +12,6 @@ can create the budget  and Now I did it (JS pure) (not for kids)
 
 
 # the style will solve this
-<img src="el_mohaseb.PNG">
+
 <img src="elmohaseb_2.PNG">
 
