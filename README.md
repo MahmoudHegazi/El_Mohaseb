@@ -28,8 +28,7 @@ performance
 <img src="myappp.PNG">
 
 
-<img src="ELmohaseb2.PNG">
-<img src="ELmohaseb.PNG">
+
 
 
 
