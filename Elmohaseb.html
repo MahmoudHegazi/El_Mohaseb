@@ -4,6 +4,11 @@
 <title>Page Title</title>
 
 <style>
+@media print {
+  @page { margin: 0; }
+  body { margin: 1.6cm; }
+}
+
 table, td {
   border: 1px solid black;
   width: 60%;
@@ -35,23 +40,28 @@ text-align: center;
 border: 2px solid green;
 
 
+
+
 }
 
 .khsom_spans {
   float:right;
   background-color:red;
-  font-size:18px;
+  font-size:13px;
   padding:5px;
   
 }
 
 
 .asol_spans {
-  float:right;background-color:green;font-size:18px;padding:5px;
+  float:right;background-color:green;font-size:13px;padding:9px;height:17px;
+  dirction: rtl;
 }
 </style>
 </head>
 <body>
+
+<div id="mytools">
 
 <div style="display:flex;">
 
@@ -72,9 +82,11 @@ border: 2px solid green;
 <br /><br />
 <button onclick="add_item()">Add</button>
 <button onclick="finished()">finished</button>
-
+<button onclick="myprinter()">Print Budget</button>
 
 <br /><br />
+
+</div>
 
 <div class="mydiv" style="width:541px;">
   <div >
@@ -83,7 +95,7 @@ border: 2px solid green;
    
    
    <div>
-   <p class="mykhsom1" style="height:100%;background-color:black;border-left:2px solid white;color:white;width:240px">خصوم</p>
+   <p class="mykhsom1" style="height:100%;background-color:black;border-left:2px solid white;color:white;width:240p;text-align:center;">خصوم</p>
    
    </div>
 </div>
@@ -92,12 +104,12 @@ border: 2px solid green;
 <div class="mydiv" id="container"  >
 
    <div id="khsom_container">
- 
+ .
    </div>
    
    
    <div id="asol_container">
-
+.
    </div>
 </div>
 
@@ -106,7 +118,10 @@ border: 2px solid green;
 
 
 <br>
+
+
 <script>
+const toolsContainer = document.getElementById("mytools");
 const allItems = [];
 var money = document.getElementById("userInput");
 let elname = document.getElementById("elementName");
@@ -166,7 +181,7 @@ let khsomContainer = document.getElementById("khsom_container");
 let asolContainer = document.getElementById("asol_container");
 
 function finished() {
-  
+  toolsContainer.style.display = "none";
   let getasol = myasol.asol;
   let getkhsm = mykhsom.khsom;
   let getNameAsl = myasol.names;
@@ -179,8 +194,8 @@ if (getasol.length > 0) {
 for (let i=0; i < getasol.length; i++) {
    let myp = document.createElement('p');
    let myspan = document.createElement('span');
-   myspan.innerText = "مدين";
-   myp.innerText = getNameAsl[i] + " " + getasol[i];
+   myspan.innerText = "مدين " + getasol[i];
+   myp.innerText = getNameAsl[i];
    myp.appendChild(myspan);
    asolContainer.appendChild(myp);
    myp.className = "myasol1";
@@ -194,8 +209,8 @@ if (getkhsm.length > 0) {
 for (let i=0; i < getkhsm.length; i++) {
    let myp = document.createElement('p');
    let myspan = document.createElement('span');
-   myspan.innerText = "دائن";
-   myp.innerText = getNameKhsm[i] + " " + getkhsm[i]; 
+   myspan.innerText = "دائن " + getkhsm[i];
+   myp.innerText = getNameKhsm[i]; 
    myp.appendChild(myspan);
    khsomContainer.appendChild(myp);
    myspan.className = "khsom_spans";
@@ -224,9 +239,12 @@ for (let i=0; i < getkhsm.length; i++) {
   */
 
 
+function myprinter() {
+  toolsContainer.style.display = "none";
+  window.print();
+}
 
 </script>
 
 </body>
 </html>
-
