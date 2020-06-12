@@ -7,3 +7,7 @@ can create the budget  and Now I did it (JS pure) (not for kids)
 
 
 (1day project)
+
+<img src="el_mohaseb.PNG">
+<img src="elmohaseb_2.PNG">
+
