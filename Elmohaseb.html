@@ -55,7 +55,7 @@ nav ul {
 }
 
 /* Clear floats after the columns */
-section:after {
+article:after {
   content: "";
   display: table;
   clear: both;
@@ -67,6 +67,11 @@ footer {
   padding: 10px;
   text-align: center;
   color: white;
+}
+
+.myasol1 {
+   border: 2px solid black;
+   padding: 10px;
 }
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
@@ -114,32 +119,51 @@ footer {
   <h2>EL Mohaseb</h2>
 </header>
 
-<section>
-  <div>
-  <article class="leftar">
-    <div id="khsom_container">
-    <h1 style="text-align:center;">liabilities</h1>
-    <br /><br />
 
+
+
+
+
+
+
+
+  <article class="leftar">
+  
+  
+  
+  
+    <div id="khsom_container">
+    <h2 style="text-align:center;">Liabilities</h2>
     <br /><br />
-    
+    <br /><br />    
     </div>
     
     
 
   </article>
   
- <section>
   
-  <article class="rightar" id="asol_container">
-    <h1 style="text-align:center;">assets</h1>
-     <br /><br />
+  
+  
+  
+  
 
-    <br /><br />
-    
+  
+  <article class="rightar" id="asol_container"><h2 style="text-align:center;">Assets</h2><br /><br /><br /><br />
   </article>
-</section>
-<div style="background-color:black;color:white;padding:10px;text-align:left;"><span style="margin-left:10%;">9999$</span> <span id="assets_total" style="margin-left:70%;">9999$</span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="background-color:black;color:white;padding:20px;text-align:left;"><span id="liab_total" style="margin-left:10%;margin-top:10px;"></span> <span id="assets_total" style="margin-left:70%;"></span></div>
 <footer>
   <p>Developed By Mahmoud Hegazi</p>
 </footer>
@@ -152,7 +176,10 @@ var money = document.getElementById("userInput");
 let elname = document.getElementById("elementName");
 let aslpsss = document.getElementById("asol");
 let khsom = document.getElementById("5som");
- 
+const liabTotal = document.getElementById("liab_total");
+const asstessTotal = document.getElementById("assets_total");
+
+
 const myasol = {
   asol: [],
   names: [],
@@ -161,6 +188,15 @@ const myasol = {
   },
   addname: function() {
     myasol.names.push(elname.value);
+  },
+  countAsol: function() {
+    let counter = "";
+    if (myasol.asol.length > 0) {
+       for(let i=0; i < myasol.asol.length; i++) {
+         counter += myasol.asol[i];
+       }
+       return counter
+    }
   }
 };
 const mykhsom = {
@@ -208,6 +244,7 @@ let asolContainer = document.getElementById("asol_container");
 function finished() {
   toolsContainer.style.display = "none";  
   
+  
   let getasol = myasol.asol;
   let getkhsm = mykhsom.khsom;
   let getNameAsl = myasol.names;
@@ -220,7 +257,7 @@ if (getasol.length > 0) {
 for (let i=0; i < getasol.length; i++) {
    let myp = document.createElement('p');
    let myspan = document.createElement('span');
-   myspan.innerText = "مدين " + getasol[i];
+   myspan.innerText = " $" + getasol[i] + " ";
    myp.innerText = getNameAsl[i];
    myp.appendChild(myspan);
    asolContainer.appendChild(myp);
@@ -235,7 +272,7 @@ if (getkhsm.length > 0) {
 for (let i=0; i < getkhsm.length; i++) {
    let myp = document.createElement('p');
    let myspan = document.createElement('span');
-   myspan.innerText = "دائن " + getkhsm[i];
+   myspan.innerText = getkhsm[i] + "$ ";
    myp.innerText = getNameKhsm[i]; 
    myp.appendChild(myspan);
    khsomContainer.appendChild(myp);
@@ -247,6 +284,10 @@ for (let i=0; i < getkhsm.length; i++) {
 
 
 
+
+
+let total_asols = myasol.countAsol();
+asstessTotal.innerHTML = "$ " + total_asols;
 
 }
 
