@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 20px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+
+
+#leftar {
+  float: left;
+  padding: 20px;
+  width: 50%;
+  background-color: #f1f1f1;
+  height: 100%; /* only for demonstration, should be removed */
+  overflow: auto;
+  border: 1px solid black;
+  text-align: center;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#rightar {
+  float: left;
+  padding: 20px;
+  width: 50%;
+  background-color: #f1f1f1;
+  height: 100%;
+  height: 100%; /* only for demonstration, should be removed */
+  overflow: auto;
+  border: 1px solid black;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  div, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<header>
+  <h2>EL Mohaseb</h2>
+</header>
+
+<section>
+  <div>
+  <article id="leftar">
+    <h1 style="text-align:center;">liabilities</h1>
+    <br /><br />
+    <p><span>input</span> <span id="assets_total" style="margin-left:35%;">9999$</span></p>
+    <p><span>input</span> <span id="assets_total" style="margin-left:35%;">9999$</span></p>
+    <br /><br />
+    <div style="background-color:black;color:white;padding:10px;text-align:left;"><span>total =</span> <span id="assets_total" style="margin-left:35%;">9999$</span></div>
+  </article>
+  
+  </div>
+  
+  <article id="rightar">
+    <h1 style="text-align:center;">assets</h1>
+     <br /><br />
+    <p><span>input</span> <span id="assets_total" style="margin-left:35%;">9999$</span></p>
+    <p><span>input</span> <span id="assets_total" style="margin-left:35%;">9999$</span></p>
+    <br /><br />
+    <div style="background-color:black;color:white;padding:10px;text-align:left;"><span>total =</span> <span id="assets_total" style="margin-left:35%;">9999$</span></div>
+  </article>
+</section>
+
+<footer>
+  <p>Developed By Mahmoud Hegazi</p>
+</footer>
+
+</body>
+</html>
