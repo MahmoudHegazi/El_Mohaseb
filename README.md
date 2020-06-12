@@ -1,3 +1,8 @@
+هفكر في التسويق العب علي حتيت اليوزرس العادين ده لو المحاسبين عايزنه ومش هيخاف
+ممكن المستخدم يحسب مزانية بيته ويحط خطه يحوش ولو دخلت البايثون ممكن اقدر
+اسعده في الادخار بس ده قدام 
+وسجل كمان الميزانيات اللي فاتت واقوله حوش ايه وزاد ولا لا 
+
 (ElMohaseb Budget JS app openSource)
 
 I deleted the part for add the total inside the div bymistake I will do again later 
