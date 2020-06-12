@@ -1,4 +1,4 @@
-  
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -176,6 +176,16 @@ footer {
    border-radius: 10%;
 }
 
+
+.lose {
+   background-color: red;
+   color: black;
+   font-size: 20px;
+   font-family: lemon;
+   padding: 10px;
+   border: 2px solid black;
+   border-radius: 10%;
+}
 
 
 
@@ -420,7 +430,7 @@ for (let i=0; i < getkhsm.length; i++) {
    let khsomTotal = document.createElement('p');
    khsomTotal.innerText = "$" + total_khsoms + " ";
    khsomTotal.id = "total_kshm";
-   alert(khsomTotal.id);
+
    khsomContainer.appendChild(khsomTotal);
    
 } 
@@ -444,7 +454,7 @@ for (let i=0; i < getkhsm.length; i++) {
 
 
 let getAsolTotal = document.getElementById("total_asl");
-let getKhsomTotal = document.getElementById("total_kshm");
+let khsomtootal = document.getElementById("total_kshm");
 
 
 if (typeof total_asols === "undefined") {
@@ -475,21 +485,21 @@ if (typeof total_khsoms === "undefined") {
 
 let checkWinner =  total_asols - total_khsoms;
 
-if (checkWinner > 0 ) {
+if (total_asols > total_khsoms) {
   getAsolTotal.className = "asol_pass";  
-  getKhsomTotal.className = "khsom_pass";
-} 
+  khsomtootal.className = "khsom_pass";
 
-if (checkWinner < 0) {  
-  getAsolTotal.className = "asol_fail";
-  getKhsomTotal.className = "khsom_fail";
-  
-}
-
-if (checkWinner == 0) {  
+} else if (total_asols == total_khsoms) {  
   getAsolTotal.className = "asol_equal";
-  getKhsomTotal.className = "khsom_equal";
+  khsomtootal.className = "khsom_equal";
+
 } 
+
+else {  
+  khsomtootal.className = "lose";
+  getAsolTotal.className = "lose";
+
+}
   
 
 
@@ -501,6 +511,18 @@ if (checkWinner == 0) {
 
   
   /*
+  if (total_khsoms > total_asols) {  
+  getAsolTotal.className = "asol_equal";
+  getKhsomTotal.className = "khsom_equal";
+  alert(total_khsoms + "3");
+  
+}
+
+
+  
+  
+  
+  
   var table = document.getElementById("myTable");
   var row = table.insertRow(0);
   var asol = row.insertCell(0);
