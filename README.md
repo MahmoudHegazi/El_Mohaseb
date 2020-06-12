@@ -2,7 +2,7 @@
 
 I deleted the part for add the total inside the div bymistake I will do again later 
 
-try it: https://inessivekoala.htmlpasta.com/
+try it: https://arabesquecomfortable.htmlpasta.com
 
 Full code on this file Elmohaseb.html 
 
