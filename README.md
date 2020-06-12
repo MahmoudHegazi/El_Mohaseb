@@ -5,6 +5,8 @@ One of my dreams while I was at my academy studing accounting is to build an app
 
 can create the budget  and Now I did it (JS pure) (not for kids)
 
+next :
+performance 
 
 (1day project)
 
