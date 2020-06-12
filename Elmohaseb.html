@@ -1,4 +1,4 @@
-  
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,6 +94,91 @@ footer {
     height: auto;
   }
 }
+
+.asol_spans {
+
+  background-color: lightgreen;
+  float: right;
+}
+
+.khsom_spans {
+ 
+  background-color: #ce9999;
+  float: right;
+}
+
+
+/* ترحيل الحساب  togle green and red*/
+
+.asol_pass {
+   background-color: green;
+   color: gold;
+   font-size: 20px;
+   font-family: lemon;
+   padding: 10px;
+   border: 2px solid gold;
+   border-radius: 10%;
+}
+
+.asol_fail {
+   background-color: red;
+   color: white;
+   font-size: 20px;
+   font-family: lemon;
+   padding: 10px;
+   border: 2px solid black;
+   border-radius: 10%;
+}
+
+/* kshom togle */
+
+
+.khsom_pass {
+   background-color: green;
+   color: gold;
+   font-size: 20px;
+   font-family: lemon;
+   padding: 10px;
+   border: 2px solid gold;
+   border-radius: 10%;
+}
+
+.khsom_fail {
+   background-color: red;
+   color: white;
+   font-size: 20px;
+   font-family: lemon;
+   padding: 10px;
+   border: 2px solid black;
+   border-radius: 10%;
+}
+
+
+/* equel */
+
+.asol_equal {
+   background-color: yellow;
+   color: black;
+   font-size: 20px;
+   font-family: lemon;
+   padding: 10px;
+   border: 2px solid green;
+   border-radius: 10%;
+}
+
+.khsom_equal {
+   background-color: yellow;
+   color: black;
+   font-size: 20px;
+   font-family: lemon;
+   padding: 10px;
+   border: 2px solid green;
+   border-radius: 10%;
+}
+
+
+
+
 </style>
 </head>
 <body>
@@ -208,7 +293,7 @@ const myasol = {
        for(let i=0; i < myasol.asol.length; i++) {
          counter += myasol.asol[i];
        }
-       return counter
+       return counter;
     }
   }
 };
@@ -227,7 +312,9 @@ const mykhsom = {
        for(let i=0; i < mykhsom.khsom.length; i++) {
          counter += mykhsom.khsom[i];
        }
-       return counter
+       
+     
+       return counter;
     }
   }
   
@@ -263,6 +350,16 @@ let gettabel = document.getElementById("myTable");
 let khsomContainer = document.getElementById("khsom_container");
 let asolContainer = document.getElementById("asol_container");
 
+/* store the created items id to edit or delete later */
+const asolIds = [];
+const kshomIds = [];
+
+
+
+
+/* finish function start main repaint here */
+
+
 function finished() {
   toolsContainer.style.display = "none";  
   
@@ -274,16 +371,19 @@ function finished() {
   
   let maxNumber = Math.max(getasol.length, getkhsm.length);
   let total_asols = myasol.countAsol();
-let total_khsoms = mykhsom.countKhsom();
+  let total_khsoms = mykhsom.countKhsom();
 
 
 if (getasol.length > 0) {
 for (let i=0; i < getasol.length; i++) {
    let myp = document.createElement('p');
    let myspan = document.createElement('span');
-   myspan.innerText = " $" + getasol[i] + " ";
+   myspan.innerText = ` $${getasol[i]}`;
    myp.innerText = getNameAsl[i];
    myp.appendChild(myspan);
+   myp.id = "asl" + i;
+   asolIds.push(myp.id);
+   myspan.className = "asol_spans";
    asolContainer.appendChild(myp);
    myp.className = "myasol1";
   
@@ -293,6 +393,7 @@ for (let i=0; i < getasol.length; i++) {
 
    let asolTotal = document.createElement('p');
    asolTotal.innerText = "$" + total_asols + " ";
+   asolTotal.id = "total_asl";
    asolContainer.appendChild(asolTotal);
 } 
 
@@ -301,9 +402,13 @@ if (getkhsm.length > 0) {
 for (let i=0; i < getkhsm.length; i++) {
    let myp = document.createElement('p');
    let myspan = document.createElement('span');
-   myspan.innerText = getkhsm[i] + "$ ";
+   myspan.innerText = getkhsm[i];
    myp.innerText = getNameKhsm[i]; 
    myp.appendChild(myspan);
+   myp.id = "khsm" + i;   
+   kshomIds.push(myp.id);
+   myspan.style.marginRight = "10px";
+   myspan.style.background = "#ce9999";
    khsomContainer.appendChild(myp);
    myspan.className = "khsom_spans";
    myp.className = "mykhsom1";
@@ -314,11 +419,71 @@ for (let i=0; i < getkhsm.length; i++) {
 
    let khsomTotal = document.createElement('p');
    khsomTotal.innerText = "$" + total_khsoms + " ";
+   khsomTotal.id = "total_kshm";
+   alert(khsomTotal.id);
    khsomContainer.appendChild(khsomTotal);
+   
 } 
 
 
 
+
+/* check who win or lose  */
+
+
+
+
+
+
+
+   
+   
+   
+   
+
+
+
+let getAsolTotal = document.getElementById("total_asl");
+let getKhsomTotal = document.getElementById("total_kshm");
+
+
+
+let checkWinner =  total_asols - total_khsoms;
+
+if (checkWinner > 0 ) {
+  getAsolTotal.class = "asol_pass";
+  alert('here1');
+  getKhsomTotal.class = "khsom_pass";
+} 
+
+else if (checkWinner < 0) {
+  alert('here2');
+  getAsolTotal.class = "asol_fail";
+  getKhsomTotal.class = "khsom_fail";
+  
+}
+
+else if (checkWinner == 0) {
+  alert('here3');
+  getAsolTotal.class = "asol_equal";
+  getKhsomTotal.class = "khsom_equal";
+} else {
+
+  if (total_asols === "undefined") {
+  alert(total_asols);
+ }
+ if (total_asols === "undefined") {
+  alert(total_asols);
+ }
+ 
+ else {
+
+  alert(total_khsoms +  total_asols);
+
+ }
+ 
+
+}
 
 
 
