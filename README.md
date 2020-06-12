@@ -10,6 +10,7 @@ One of my dreams while I was at my academy studing accounting is to build an app
 can create the budget  and Now I did it (JS pure) (not for kids)
 
 next :
+make the highr total be green
 don't forget to add: اجمالي في النحتين وترحيل الفرق
 performance 
 
