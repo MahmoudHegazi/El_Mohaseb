@@ -5,6 +5,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+  
+/* remove header and footer for printer will not use it in free mode  */
+  @media print {
+  @page { margin: 0; }
+  body { margin: 1.6cm; }
+}
+  
 * {
   box-sizing: border-box;
 }
