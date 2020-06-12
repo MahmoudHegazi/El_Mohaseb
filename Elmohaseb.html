@@ -82,12 +82,12 @@ border: 2px solid green;
 <br /><br />
 <button onclick="add_item()">Add</button>
 <button onclick="finished()">finished</button>
-<button onclick="myprinter()">Print Budget</button>
+
 
 <br /><br />
 
 </div>
-
+<button onclick="myprinter()" id="myprinter">Print Budget</button>
 <div class="mydiv" style="width:541px;">
   <div >
    <p style="height:100%;background-color:black;border-left:2px solid white;color:white;width:240px" class="myasol1">اصول</p>
@@ -122,6 +122,7 @@ border: 2px solid green;
 
 <script>
 const toolsContainer = document.getElementById("mytools");
+const myprint = document.getElementById("myprinter");
 const allItems = [];
 var money = document.getElementById("userInput");
 let elname = document.getElementById("elementName");
@@ -181,7 +182,8 @@ let khsomContainer = document.getElementById("khsom_container");
 let asolContainer = document.getElementById("asol_container");
 
 function finished() {
-  toolsContainer.style.display = "none";
+  toolsContainer.style.display = "none";  
+  
   let getasol = myasol.asol;
   let getkhsm = mykhsom.khsom;
   let getNameAsl = myasol.names;
@@ -240,7 +242,8 @@ for (let i=0; i < getkhsm.length; i++) {
 
 
 function myprinter() {
-  toolsContainer.style.display = "none";
+
+  myprint.style.display = "none";
   window.print();
 }
 
