@@ -1,5 +1,4 @@
-  
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>CSS Template</title>
@@ -486,7 +485,8 @@ if (typeof total_khsoms === "undefined") {
 let checkWinner =  total_asols - total_khsoms;
 
 if (total_asols > total_khsoms) {
-  getAsolTotal.className = "asol_pass";  
+  getAsolTotal.className = "asol_pass";
+  getAsolTotal.innerText += "   (earnings)";
   khsomtootal.className = "khsom_pass";
 
 } else if (total_asols == total_khsoms) {  
@@ -497,6 +497,7 @@ if (total_asols > total_khsoms) {
 
 else {  
   khsomtootal.className = "lose";
+  khsomtootal.innerText += "   (Loss)";
   getAsolTotal.className = "lose";
 
 }
@@ -517,8 +518,6 @@ else {
   alert(total_khsoms + "3");
   
 }
-
-
   
   
   
@@ -546,3 +545,4 @@ function myprinter() {
 
 </body>
 </html>
+
