@@ -1,4 +1,5 @@
   
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -456,25 +457,34 @@ if (checkWinner > 0 ) {
   getKhsomTotal.class = "khsom_pass";
 } 
 
-else if (checkWinner < 0) {
+if (checkWinner < 0) {
   alert('here2');
   getAsolTotal.class = "asol_fail";
   getKhsomTotal.class = "khsom_fail";
   
 }
 
-else if (checkWinner == 0) {
+if (checkWinner == 0) {
   alert('here3');
   getAsolTotal.class = "asol_equal";
   getKhsomTotal.class = "khsom_equal";
-} else if (total_asols == "undefined") {
+} 
   
-  alert(total_asols + total_khsoms);
 
-} else {
 
-  alert(total_asols + total_khsoms);
-}
+if (typeof total_asols === "undefined") {
+    alert("total_asols is undefined");
+  } else {
+    alert("total_asols is defined");
+  }
+
+
+if (typeof total_khsoms === "undefined") {
+    alert("total_khsoms is undefined");
+  } else {
+    alert("total_khsoms is defined");
+  }
+  
 
 
 
