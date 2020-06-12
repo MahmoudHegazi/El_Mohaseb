@@ -14,15 +14,15 @@ don't forget to add: اجمالي في النحتين وترحيل الفرق
 performance 
 
 (1day project)
-
+### solved with new interface (the style problem )
 <img src="myappp.PNG">
 
 
-### maybe python and jinja2 make it more professoinal
+<img src="ELmohaseb2.PNG">
+<img src="ELmohaseb.PNG">
 
-### solved with new interface (the style problem )
 
-<img src="elmohaseb_2.PNG">
+
 
 
 recap:
