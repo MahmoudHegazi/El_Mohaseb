@@ -1,4 +1,4 @@
-    
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -117,7 +117,7 @@ footer {
    font-family: lemon;
    padding: 10px;
    border: 2px solid gold;
-   border-radius: 10%;
+   border-radius: 4%;
 }
 
 .asol_fail {
@@ -127,7 +127,7 @@ footer {
    font-family: lemon;
    padding: 10px;
    border: 2px solid black;
-   border-radius: 10%;
+   border-radius: 4%;
 }
 
 /* kshom togle */
@@ -140,7 +140,7 @@ footer {
    font-family: lemon;
    padding: 10px;
    border: 2px solid gold;
-   border-radius: 10%;
+   border-radius: 4%;
 }
 
 .khsom_fail {
@@ -150,7 +150,7 @@ footer {
    font-family: lemon;
    padding: 10px;
    border: 2px solid black;
-   border-radius: 10%;
+   border-radius: 4%;
 }
 
 
@@ -163,7 +163,7 @@ footer {
    font-family: lemon;
    padding: 10px;
    border: 2px solid green;
-   border-radius: 10%;
+   border-radius: 4%;
 }
 
 .khsom_equal {
@@ -173,7 +173,7 @@ footer {
    font-family: lemon;
    padding: 10px;
    border: 2px solid green;
-   border-radius: 10%;
+   border-radius: 4%;
 }
 
 
@@ -184,7 +184,7 @@ footer {
    font-family: lemon;
    padding: 10px;
    border: 2px solid black;
-   border-radius: 10%;
+   border-radius: 4%;
 }
 
 
@@ -298,10 +298,10 @@ const myasol = {
     myasol.names.push(elname.value);
   },
   countAsol: function() {
-    let counter = "";
+    let counter = 0;
     if (myasol.asol.length > 0) {
        for(let i=0; i < myasol.asol.length; i++) {
-         counter += myasol.asol[i];
+         counter += Number(myasol.asol[i]);
        }
        return counter;
     }
@@ -317,10 +317,10 @@ const mykhsom = {
     mykhsom.names.push(elname.value);
   },
   countKhsom: function() {
-    let counter = "";
+    let counter = 0;
     if (mykhsom.khsom.length > 0) {
        for(let i=0; i < mykhsom.khsom.length; i++) {
-         counter += mykhsom.khsom[i];
+         counter += Number(mykhsom.khsom[i]);
        }
        
      
