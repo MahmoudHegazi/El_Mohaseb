@@ -1,5 +1,7 @@
 (ElMohaseb Budget JS app openSource)
 
+try it: https://inessivekoala.htmlpasta.com/
+
 Full code on this file Elmohaseb.html 
 
 add items and enter the number then select the type of each item click finish get prinited budget
